@@ -1,0 +1,18 @@
+SECRET_KEY = ''
+
+DEBUG = True
+
+ALLOWED_HOSTS = []
+
+DATABASES = {
+    'default': {
+        'ENGINE': '',
+        'NAME': '',
+        'HOST': '',
+        'PORT': '',
+        'USER': '',
+        'PASSWORD': '',
+    }
+}
+
+TIME_ZONE = 'GMT-0'
