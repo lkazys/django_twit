@@ -8,12 +8,12 @@ from django.contrib.auth.models import User
 # Create your views here.
 def index(request):
     latest_tweets = Tweet.objects.order_by('-pub_date')[:10]
-    template = loader.get_template('twit/index.html')
+    template = loader.get_template('tweets/index.html')
     context = {'latest_tweets': latest_tweets}
-    return render(request, 'twit/index.html', context)
+    return render(request, 'tweets/index.html', context)
 
 def tweet(request, tweet_id):
     tweet = get_object_or_404(Tweet, pk=tweet_id)
     user = tweet.user
     context = {'user': user, 'tweet': tweet}
-    return render(request, 'twit/tweet.html', context)
+    return render(request, 'tweets/tweet.html', context)
