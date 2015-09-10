@@ -1,0 +1,9 @@
+{% if latest_tweets %}
+  <ul>
+    {% for tweet in latest_tweets %}
+      <li><a href="{% url 'tweets:tweet' tweet.id %}">{{ tweet.text }}</a></li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No tweets found</p>
+{% endif %}
